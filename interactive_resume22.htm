@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/* profile card */
+
+.card {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     max-width: 300px;
+     margin: auto;
+     text-align: center;
+     font-family: arial;
+}
+
+.title {
+     color:grey;
+     font-size: 18px;
+}
+
+button {
+     border: none;
+     outline: 0;
+     display: inline-block;
+     padding: 19px;
+     color: white;
+     background-color: #000;
+     text-align: center;
+     width: 100%;
+     font-size: 18px;
+}
+
+a {
+     text-decoration: none;
+     font-size: 22px;
+     color: black;
+}
+
+a:hover {
+     opacity: 0.4;
+}
+
+/* slide toggle */
+
+.row {
+     display: none;
+}
+
+p {
+     color: green;
+}
+
+p.z {
+     color: green;
+     font: 30px Arial, sans-serif;
+     cursor: pointer;
+}
+
+p.z:hover {
+     background-color: #e6ffff;
+     color:black;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+hr {
+     border-top: 0.5px solid blue;
+}
+
+h2 {
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* toggle boxes */
+
+   .skillsRow{
+        font: 18px Arial, sans-serif;
+	height: 500px;
+    }
+
+   .educationRow{
+        font: 18px Arial, sans-serif;
+         height: 500px;  
+    }
+
+   .workRow{
+        font: 18px Arial, sans-serif;
+        height: 600px;
+    }
+
+ /* scroll effect */
+
+html {
+   scroll-behavior: smooth;
+}
+
+</style>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+
+
+    $( ".skills" ).click(function(e) {
+        e.preventDefault();
+            $(".row").not(".skillsRow").slideUp();
+            $( ".skillsRow" ).slideToggle( "slow", function() {
+$(document).scrollTop($(".skillsRow").height());
+    	});
+     });
+     
+    $( ".education" ).click(function(e) {
+        e.preventDefault();
+            $(".row").not(".educationRow").slideUp();
+            $( ".educationRow" ).slideToggle( "slow", function() {
+$(document).scrollTop($(".educationRow").height());
+    	});
+    });
+    
+    $( ".work" ).click(function(e) {
+        e.preventDefault();
+            $(".row").not(".workRow").slideUp();
+            $( ".workRow" ).slideToggle( "slow", function() {
+$(document).scrollTop($(".workRow").height());
+    	});
+     });
+
+});
+
+</script>
+
+<body>
+
+<h2 style="text-align:center">User Resume Profile</h2>
+
+
+<div class="card">
+  
+<h1>Les Tarver</h1>
+<p class="title">Frontend/Backend Developer
+<br>Web Designer/Developer</p>
+
+<div style="margin: 24px 0;">
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+
+</div>
+<p><button>les.alltech@outlook.com les.hitech@gmail.com</button></p>
+</div>
+
+<div style="font: 20px Arial, sans-serif">
+<b>About:</b>
+<br>Educated, independent, and self-taught designer and developer with a total of 10+ years in the art of graphic design and the skill of programming. With the ability and eagerness to deliver an immersive and satisfying user experience through efficient website development, proactive feature optimization, and relentless debugging. 
+<br><h5 style="opacity: 0.6">Side note: This, referred to as an interactive resume, was created mainly with HTML and CSS. JQuery was used for the slide up and down toggling and auto scroll effects for the slided down list after each resume subject is clicked. The Lindedin and Twitter logos are pulled from Cloudflare, although such logos could be created via Adobe Illustrator or Inkscape.</h5><br>
+</div>
+
+<p class ="skills show z">KNOWLEDGE AND SKILLS</p>
+<div class="skillsRow row">
+
+<ul>
+<li>HTML/CSS
+<li>Javascript
+<li>Jquery
+<li>Angular
+<li>React
+<li>Adobe Creative Cloud/Suite
+<li>Python
+<li>Ruby
+<li>SQL
+<li>Visual Studio (C#, VB.Net, ASP.NET, .NET Framework)
+<li>Visual Studio Code
+<li>Java
+<li>NodeJS
+<li>Microsoft Security
+<li>Microsoft Endpoint Configuration Manager/SCCM
+<li>Internet and network security
+<li>MS Office
+<li>LibreOffice
+<li>MongoDB
+<li>Express
+</ul>
+</div>
+
+<hr>
+
+<p class ="education show z">EDUCATION</p>
+<div class="educationRow row">
+ 
+Online training courses,  2018-Present
+<ul>
+<li>Amazon Web Services (AWS)
+<li>CareerFoundry
+<li>CBT Nuggets
+<li>CodeAcademy
+<li>FreeCodeCamp
+<li>Skillsoft
+</ul>
+
+Xerox Training Center, Rochester, New York, 2004
+<ul>
+<li>Certificate in Xerox DocuColor iGen3 Digital Press
+</ul>
+
+Jefferson State Community College, Birmingham, Alabama, 2002
+<ul>
+<li>Associate of Science Degree in Software Development
+<li>Certificate in Programming
+<li>Degree awarded August 2002
+<li>G.P.A: Major, 4.00; Cumulative, 3.5
+<li>Dean’s List award
+</ul>
+</div>
+
+<hr>
+
+<p class ="work show z">WORK EXPERIENCE</p>
+<div class="workRow row">
+Computer Operations, JEFFERSON COUNTY COMMISSION, Birmingham, AL, 2018-Present
+
+<ul>
+<li>Monitored system and large volume print jobs
+<li>Entered commands for modifying, running, and scheduling jobs
+<li>Exported, exchanged,  stocked tapes
+<li>Operated on Unisys mainframe 
+<li>Data backups
+<li>Served as Help Desk and Support Technician backup and assisting coworkers in other departments with hardware and software issues
+<li>Deployed apps and monitored issues via Microsoft Endpoint Configuration/SCCM
+</ul>
+
+Digital Print Operator 2, RR DONNELLEY, Lewisville, TX, 2015-2017 
+
+<ul>
+<li>Prepared files for print
+<li>Raster Image Processing(RIP)
+<li>monitored output on files and made any adjustments for better quality
+<li>Performed minor maintenance on Xerox Docuprint 155MX and 180MX printers (cleared paper jams, replaced toner, restarted system, troubleshooting) 
+<li>Maintained daily print production logs 
+<li>Restocked inventory and supplies
+<li>Assisted with bindery machine
+</ul>
+
+Preflight Technician, MSPARK, Helena, AL, 2012-2014
+
+<ul>
+<li>Checked digital files received from consumers via email, cloud services, or FTP for completeness and addressing any potential problems (fonts, images, and unacceptable format) often correcting them with Adobe Creative Suite and Enfocus Pitstop
+<li>Created applications in Applescript and Javascript for department jobs to perform faster and more effectively 
+<li>Designed and developed advertisements and websites
+<li>Solved networking issues in the workplace
+</ul>
+</div>
+
+</body>
+</html>
